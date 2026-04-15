@@ -9,7 +9,7 @@ const projectRoutes = require('./routes/projectRoutes');
 const app = express();
 
 app.use(cors({
-  origin: "https://your-frontend-url.com",
+  origin: "https://project-management-system-tau-rose.vercel.app",
   credentials: true
 }));
 // Body parsing
