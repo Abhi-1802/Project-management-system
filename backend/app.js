@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const errorHandler = require('./middleware/errorHandler');
 
 const authRoutes = require('./routes/authRoutes');
@@ -7,6 +8,10 @@ const projectRoutes = require('./routes/projectRoutes');
 
 const app = express();
 
+app.use(cors({
+  origin: "https://your-frontend-url.com",
+  credentials: true
+}));
 // Body parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
